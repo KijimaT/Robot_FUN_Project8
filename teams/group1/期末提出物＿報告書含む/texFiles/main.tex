@@ -1,0 +1,53 @@
+% ドキュメントクラス[オプション]{文書クラス}
+% 文書クラス：和文(新)
+% オプション：dvipdfmx（pdf出力をオンにする）
+% オプション：autodetect-engine(下に説明)
+% オプション：titlepage(タイトルが表紙として扱われる)
+%エンジン自動オプション。
+%文書から使用するtexエンジンを自動で決定する)
+\documentclass[dvipdfmx, autodetect-engine, titlepage, 10pt, a4paper]{jsreport}
+\input{package_set}
+%
+%
+%
+\begin{document}
+\thispagestyle{empty}
+\linesparpage{42}　% 1ページあたり行数の指定
+\mojiparline{43}　% 一行あたり文字数の指定
+% 本文まではアラビア数字でページ番号を割り当てなおす
+\pagenumbering{roman}
+% ---タイトル---
+\include{title/title}
+% 字下げ込みでの指定になるので、字下げ分1少なく設定する
+% 概要より本文優先の字数設定。
+% ---概要---
+\thispagestyle{plain}
+\include{abstract/abstract}
+\thispagestyle{plain}
+\include{abstract/abstract_eng}
+% ---目次の表示---
+\thispagestyle{plain}
+\tableofcontents 
+% ---本文---
+% ---第１章---
+% はじめに
+\include{introduction/introduction}
+% ---第２章---
+% プロジェクトの概要
+\include{project_abs/project_abs}
+% ---第３章---
+% 課題解決のプロセス
+\include{solution_process/solution_process}
+% ---第４章---
+% インターワーキング
+\include{interworking}
+% ---第５章---
+% 結果
+\include{result/result}
+% 第６章
+% まとめ
+\include{reference/reference}
+%参考文献
+\include{appendix/appendix}
+% 付録
+\end{document}
