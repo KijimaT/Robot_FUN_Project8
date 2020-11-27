@@ -7,6 +7,7 @@ int scene = 0;//画面遷移切り替え用変数
 int count = 0;//時間管理用変数
 int flag = 0;//タッチ管理での状態遷移状況管理用変数
 int signal=0;//arduinoからの値100~
+int sInit = 0;
 
 void setup(){
  background(0); 
@@ -17,8 +18,9 @@ void setup(){
 }
 
 void draw(){
+  delay(100);
  signal =port.read();
- println(signal);
+ print(signal);
 
 /*signalが0か100の時*/
 if(signal==0){//signal=0(初期値)
@@ -41,9 +43,10 @@ if(signal==0){//signal=0(初期値)
    //初回の通信を確認したら(101)、時間経過でデフォルトに移行するようにしたい
    //flagをどう使うか？
    //→
-   if(flag == 1){
-     default1();
-   } else if(flag == 2){//デフォルト状態でタッチを受けた時
+   flag =1;
+   default1();
+   
+   if(flag == 2){//デフォルト状態でタッチを受けた時
      count = 0;
      egao();
      while(count<300){
@@ -54,10 +57,12 @@ if(signal==0){//signal=0(初期値)
       //default1();
       flag = 1;
     }
-  }
- } else if(signal ==102){
+   }
+  } else if(signal ==102){
    /*TODO*/
    //起動完了後の動作
+  } else {
+  port.write(0);
  }
 }
 
@@ -72,3 +77,4 @@ count は時間管理用変数。
 ・モーターの動作と顔の表情の連携についてはそれぞれの顔関数(kao部分にある関数)にあるport.write(番号)の番号により、
 　Arduino側に表情が変わったことを伝える。
  →100番代にしてみた
+ */
