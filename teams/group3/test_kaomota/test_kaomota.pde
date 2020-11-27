@@ -1,8 +1,5 @@
 import processing.serial.*;
-
 Serial port;
-
-
 int scene = 0;
 
 int t_start;//現在の状態になった時刻[ミリ秒]
