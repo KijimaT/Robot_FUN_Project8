@@ -66,13 +66,13 @@ void loop() {
         delay(1000);
         mInit = 1; //モータの初期動作完了
       }else{
-        Serial.write(100);
-      }
-      if(sInit == 0){
+        if(sInit == 0){
         Serial.write(100);
       }else{
         Serial.write(101);
       }
+      }
+      
       
     }else if(data==1){
       if (sInit == 0) {
