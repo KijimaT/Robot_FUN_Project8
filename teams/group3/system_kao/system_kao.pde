@@ -44,22 +44,7 @@ void draw() {
     flag =1;
     default1();
 
-    if (flag == 2) {//デフォルト状態でタッチを受けた時
-      //count = 0;
-      egao();
-      delay(2500);
-      port.write(1);
-      flag = 1;
-      /*
-     while(count<300){
-       count++;
-       }
-       if(count == 300){
-       
-       //default1();
-       
-       }*/
-    }
+    
   } else if (signal ==102) {
     /*TODO*/
     //起動完了後の動作
