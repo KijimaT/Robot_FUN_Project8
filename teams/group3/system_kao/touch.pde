@@ -1,6 +1,9 @@
 void mousePressed(){
-  if(flag == 1){
+ 
+    if(flag == 1){
     flag = 2;
-    //port.write("touch"); //これはいるのかわからんからとりあえずコメントアウト
+    port.write(0); //これはいるのかわからんからとりあえずコメントアウト
   }
+  
+  
 }
