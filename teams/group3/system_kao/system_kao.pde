@@ -13,25 +13,25 @@ void setup(){
  //fullScreen();
  size(400,250);
  //mu2();
- port = new Serial(this, "/dev/ttyACM0",9600);
- port.write(0);//コードが起動した時にArduinoに起動したという合図を出す。
+ port = new Serial(this, "COM5",9600);
 }
 
 void draw(){
- //count++;
  signal =port.read();
- if(signal == 0){//Arduinoからint型の0を受け取った時default1()を実行（デフォルト状態にする）
+ println(signal);
+ 
+ if(signal == 100){//Arduinoからint型の0を受け取っている時default1()を実行（デフォルト状態にする）
    count = 0;
    ok();
    while(count<300){
      count++;
    }
    if(count == 300){
-     port.write(1);
+     port.write(2);
      default1();
      flag = 1;
    }
- }else if(signal == 2) {
+ }else if(signal == 101) {
    if(flag == 1){
      default1();
    }else if(flag == 2){//デフォルト状態でタッチを受けた時
@@ -41,14 +41,12 @@ void draw(){
       count++;
      }
      if(count == 300){
-      port.write(1);
+      port.write(1);//今のところArduinoからsignalはずっと2が帰ってくる
+      //default1();
       flag = 1;
-      default1();
     }
   }
  }
- 
-   
 }
 
 
