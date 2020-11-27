@@ -57,12 +57,13 @@ if(signal==0){//signal=0(初期値)
       //default1();
       flag = 1;
     }
-  }
- } else if(signal ==102){
+   }
+  } else if(signal ==102){
    /*TODO*/
    //起動完了後の動作
- } else {
+  } else {
   port.write(0);
+ }
 }
 
 
