@@ -43,7 +43,27 @@ void draw() {
     //→
     flag =1;
     default1();
+<<<<<<< HEAD
 
+=======
+    /*
+    if (flag == 2) {//デフォルト状態でタッチを受けた時
+      //count = 0;
+      egao();
+      delay(2500);
+      port.write(1);
+      flag = 1;
+      /*
+     while(count<300){
+       count++;
+       }
+       if(count == 300){
+       
+       //default1();
+       
+       }*/
+       
+>>>>>>> fe02280e4cc70f1b17b9d1673e3d1c2e7bba4639
     
   } else if (signal ==102) {
     /*TODO*/
