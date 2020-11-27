@@ -68,6 +68,11 @@ void loop() {
       }else{
         Serial.write(100);
       }
+      if(sInit == 0){
+        Serial.write(100);
+      }else{
+        Serial.write(101);
+      }
       
     }else if(data==1){
       if (sInit == 0) {
@@ -80,7 +85,7 @@ void loop() {
       }
       //
     }else if (data == 2 ) {
-      Serial.write("");
+      Serial.write(101);
     } else if (data == 3) {
       //servo2.write(0);
       Serial.write(3);
