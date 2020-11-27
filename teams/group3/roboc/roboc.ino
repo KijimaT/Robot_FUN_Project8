@@ -87,6 +87,4 @@ void loop() {
     } else if (data == 4) {
       
     }
-  }
- }
 }
