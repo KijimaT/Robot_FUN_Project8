@@ -85,7 +85,7 @@ void loop() {
       }
       //
     }else if (data == 2 ) {
-      Serial.write(101);
+      Serial.write(102);
     } else if (data == 3) {
       //servo2.write(0);
       Serial.write(3);
