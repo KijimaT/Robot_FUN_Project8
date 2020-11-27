@@ -43,7 +43,7 @@ void draw() {
     //→
     flag =1;
     default1();
-
+    /*
     if (flag == 2) {//デフォルト状態でタッチを受けた時
       //count = 0;
       egao();
@@ -59,7 +59,8 @@ void draw() {
        //default1();
        
        }*/
-    }
+       
+    
   } else if (signal ==102) {
     /*TODO*/
     //起動完了後の動作
