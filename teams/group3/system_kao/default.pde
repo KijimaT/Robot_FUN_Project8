@@ -1,4 +1,3 @@
-
 void default1(){
   int time=0;
   
