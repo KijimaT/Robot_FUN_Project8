@@ -23,6 +23,26 @@ void draw() {
   signal =port.read();
   println(signal);
 
+  if(scene == 0){
+    no();
+  }else if(scene == 1){
+    no();
+    mu();
+  }else if(scene == 2){
+    no();
+    mu2();
+  }else if(scene == 3){
+    no();
+    egao();
+  }else if(scene == 4){
+    no();
+    egao2();
+  }else if(){
+    no();
+    ok();
+  }
+  
+  
   /*signalが0か100の時*/
   if (signal==0) {//signal=0(初期値)
     /*TODO*/
