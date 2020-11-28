@@ -2,7 +2,7 @@ import processing.serial.*;
 
 Serial port;
 
-int random = 0;
+int num = 0;
 int scene = 0;//画面遷移切り替え用変数
 int count = 0;//時間管理用変数
 int flag = 0;//タッチ管理での状態遷移状況管理用変数
@@ -19,9 +19,12 @@ void setup() {
 }
 
 void draw() {
-  delay(100);
+ // delay(100);
   signal =port.read();
+  num = (int)random(0,255);
   print(signal);
+  print(",");
+  print(num%5);
   print(",");
   println(scene);
 
@@ -48,7 +51,7 @@ void draw() {
     default1();
     port.write(1);
     
-  } else if (signal ==102) {
+  } else if (signal == 102) {
     /*TODO*/
     //起動完了後の動作
     egao();

@@ -1,157 +1,38 @@
-
-void default1(){
-  int time=0;
-  println("time:"+time);
-  
-  /*if(scene == 0){
-    no();
-  }else if(scene == 1){
-    no();
-    mu();
-  }else if(scene == 2){
-    no();
-    mu2();
-  }else if(scene == 3){
-    no();
-    egao();
-  }else if(scene == 4){
-    no();
-    egao2();
-  }*/
-  
-  
-  if(scene == 0){
+int time =0;
+void default1() {
+  //int time=0;
+  if (flag == 1) {
+    if (scene == 0) {
       no();
-      time++;
+      delay(1000);
+      scene = num % 5;
+    } else if (scene == 1) {
+      mu();
+      delay(1000);
       //println("time:"+time);
-      
-      if(time == 600){
-      time = 0;
       no();
-      random = (int)random(0,255);
-      if(random%5 == 0){
-        
-        scene = 1;
-      }else if(random%5 == 1){
-        
-        scene = 2;
-     }else if(random%5 == 2){
-      
-      scene = 3;
-     }else if(random%5 == 3){
-     
-      scene = 4;
-      }else if(random%5 == 4){
-     
-      scene = 0;
-     }
-    }}
-  else if(scene == 1){
-    no();
-    mu();
-    time++;
-    //println("time:"+time);
-    
-    if(time==600){
-      time=0;
-      no();
-      random = (int)random(0,255);
-      if(random%5 == 0){
-        
-        scene = 2;
-      }else if(random%5 == 1){
-        
-        scene = 2;
-     }else if(random%5 == 2){
-      
-      scene = 3;
-     }else if(random%5 == 3){
-      
-      scene = 4;
-      }else if(random%5 == 4){
-      
-      scene = 0;
-     }
-   }
-  }else if(scene == 2){
-    no();
-    mu2();
-    time++;
-    //println("time:"+time);
-    
-    if(time==600){
-      time=0;
-      no();
-      random = (int)random(0,255);
-      if(random%5 == 0){
-        
-        scene = 1;
-      }else if(random%5 == 1){
-        
-        scene = 3;
-     }else if(random%5 == 2){
-      
-      scene = 3;
-     }else if(random%5 == 3){
-      
-      scene = 4;
-      }else if(random%5 == 4){
-      
-      scene = 0;
-     }
-    }
-  }else if(scene == 3){
-    no();
-    egao();
-    time++;
-    //println("time:"+time);
-    
-    if(time==300){
-      time=0;
-      no();
-      random = (int)random(0,255);
-      if(random%5 == 0){
-        
-        scene = 1;
-      }else if(random%5 == 1){
-        
-        scene = 2;
-     }else if(random%5 == 2){
-      
-      scene = 1;
-     }else if(random%5 == 3){
-      
-      scene = 4;
-      }else if(random%5 == 4){
-      
-      scene = 0;
-     }
-    }
-  }else if(scene == 4){
+      scene = num % 5;
+    } else if (scene == 2) {
 
+      mu2();
+      delay(1000);
       no();
+      scene = num % 5;
+    } else if (scene == 3) {
+
+      egao();
+      delay(1000);
+      no();
+      scene = num % 5;
+    } else if (scene == 4) {
       egao2();
-      time++;
-      //println("time:"+time);
-      
-      if(time == 600){
-      random = (int)random(0,255);
-      if(random%5 == 0){
-        
-        scene = 1;
-      }else if(random%5 == 1){
-        
-        scene = 2;
-     }else if(random%5 == 2){
-      
-      scene = 3;
-     }else if(random%5 == 3){
-      
-      scene = 0;
-      }else if(random%5 == 4){
-      
-      scene = 0;
-     }
-    
-  }}
+      delay(1000);
+      no();
+      scene = num % 5;
+   }
+  } else {
+    //default1が呼び出されててもタッチでflagが2ならばegaoを表示する
+    egao();
+    //Arduinoには2を送信して、102が帰ってくる
+  }
 }
