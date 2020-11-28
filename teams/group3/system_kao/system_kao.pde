@@ -14,7 +14,8 @@ void setup() {
   //fullScreen();
   size(400, 250);
   //mu2();
-  port = new Serial(this, "/dev/ttyACM0", 9600);
+ // port = new Serial(this, "/dev/ttyACM0", 9600);
+   port = new Serial(this, "COM5", 9600);
 }
 
 void draw() {
@@ -41,29 +42,15 @@ void draw() {
     //初回の通信を確認したら(101)、時間経過でデフォルトに移行するようにしたい
     //flagをどう使うか？
     //→
-    flag =1;
+    flag = 1;
     default1();
-<<<<<<< HEAD
-
-=======
-    /*
+    
     if (flag == 2) {//デフォルト状態でタッチを受けた時
       //count = 0;
       egao();
       delay(2500);
       port.write(1);
-      flag = 1;
-      /*
-     while(count<300){
-       count++;
-       }
-       if(count == 300){
-       
-       //default1();
-       
-       }*/
-       
->>>>>>> fe02280e4cc70f1b17b9d1673e3d1c2e7bba4639
+    }
     
   } else if (signal ==102) {
     /*TODO*/
