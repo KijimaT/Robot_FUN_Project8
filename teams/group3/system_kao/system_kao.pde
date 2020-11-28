@@ -21,11 +21,10 @@ void setup() {
 void draw() {
   delay(100);
   signal =port.read();
-  println(signal);
+  print(signal);
+  print(",");
+  println(scene);
 
-
-  
-  
   /*signalが0か100の時*/
   if (signal==0) {//signal=0(初期値)
     /*TODO*/
