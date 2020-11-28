@@ -21,6 +21,7 @@ void default1(){
   
   if(scene == 0){
       no();
+      time++;
       random = (int)random(0,255);
       if(random%5 == 0){
         
@@ -67,6 +68,7 @@ void default1(){
   }else if(scene == 2){
     no();
     mu2();
+    time++;
     if(time==600){
       time=0;
       no();
@@ -117,6 +119,7 @@ void default1(){
 
       no();
       egao2();
+      time++;
       random = (int)random(0,255);
       if(random%5 == 0){
         
