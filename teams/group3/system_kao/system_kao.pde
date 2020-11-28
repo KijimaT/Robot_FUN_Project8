@@ -47,21 +47,13 @@ void draw() {
     //→
     flag = 1;
     default1();
-
-    
-    if (flag == 2) {//デフォルト状態でタッチを受けた時
-      //count = 0;
-      egao();
-      delay(2500);
-      port.write(1);
-    }
-
+    port.write(1);
     
   } else if (signal ==102) {
     /*TODO*/
     //起動完了後の動作
     egao();
-    delay(2500);
+    delay(2500);//遅延させて、デフォルトに戻る
     port.write(1);
     flag = 1;
   } else {

@@ -16,9 +16,6 @@ void default1(){
   }else if(scene == 4){
     no();
     egao2();
-  }else if(){
-    no();
-    ok();
   }
   
   
