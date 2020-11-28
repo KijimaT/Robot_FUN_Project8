@@ -1,24 +1,6 @@
 
 void default1(){
   int time=0;
-  
-    if(scene == 0){
-    no();
-  }else if(scene == 1){
-    no();
-    mu();
-  }else if(scene == 2){
-    no();
-    mu2();
-  }else if(scene == 3){
-    no();
-    egao();
-  }else if(scene == 4){
-    no();
-    egao2();
-  }
-  
-  
   if(scene == 0){
       no();
       random = (int)random(0,255);
@@ -40,9 +22,10 @@ void default1(){
      }
     }
   else if(scene == 1){
+    no();
     egao();
     time++;
-    if(time==600){
+    if(time==300){
       time=0;
       no();
       random = (int)random(0,255);
@@ -64,8 +47,9 @@ void default1(){
      }
    }
   }else if(scene == 2){
+    no();
     mu2();
-    if(time==600){
+    if(time==300){
       time=0;
       no();
       random = (int)random(0,255);
@@ -87,6 +71,7 @@ void default1(){
      }
     }
   }else if(scene == 3){
+    no();
     egao2();
     time++;
     if(time==300){
@@ -112,7 +97,8 @@ void default1(){
     }
   }else if(scene == 4){
 
-      //no();
+      no();
+      
       random = (int)random(0,255);
       if(random%5 == 0){
         
