@@ -43,9 +43,6 @@ void draw() {
     //→
     flag =1;
     default1();
-<<<<<<< HEAD
-
-=======
     /*
     if (flag == 2) {//デフォルト状態でタッチを受けた時
       //count = 0;
@@ -62,9 +59,6 @@ void draw() {
        //default1();
        
        }*/
-       
->>>>>>> fe02280e4cc70f1b17b9d1673e3d1c2e7bba4639
-    
   } else if (signal ==102) {
     /*TODO*/
     //起動完了後の動作
