@@ -44,6 +44,7 @@ void draw() {
     //→
     flag = 1;
     default1();
+
     
     if (flag == 2) {//デフォルト状態でタッチを受けた時
       //count = 0;
@@ -51,6 +52,7 @@ void draw() {
       delay(2500);
       port.write(1);
     }
+
     
   } else if (signal ==102) {
     /*TODO*/
