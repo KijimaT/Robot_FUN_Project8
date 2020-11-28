@@ -1,3 +1,4 @@
+
 void default1(){
   int time=0;
   
@@ -22,6 +23,10 @@ void default1(){
       no();
       time++;
       println("time:"+time);
+      
+      if(time == 600){
+      time = 0;
+      no();
       random = (int)random(0,255);
       if(random%5 == 0){
         
@@ -39,12 +44,13 @@ void default1(){
      
       scene = 0;
      }
-    }
+    }}
   else if(scene == 1){
     no();
     mu();
     time++;
     println("time:"+time);
+    
     if(time==600){
       time=0;
       no();
@@ -71,6 +77,7 @@ void default1(){
     mu2();
     time++;
     println("time:"+time);
+    
     if(time==600){
       time=0;
       no();
@@ -97,6 +104,7 @@ void default1(){
     egao();
     time++;
     println("time:"+time);
+    
     if(time==300){
       time=0;
       no();
@@ -124,6 +132,8 @@ void default1(){
       egao2();
       time++;
       println("time:"+time);
+      
+      if(time == 600){
       random = (int)random(0,255);
       if(random%5 == 0){
         
@@ -142,5 +152,5 @@ void default1(){
       scene = 0;
      }
     
-  }
+  }}
 }
