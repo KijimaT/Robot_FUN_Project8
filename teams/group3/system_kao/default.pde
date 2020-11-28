@@ -1,6 +1,27 @@
 
 void default1(){
   int time=0;
+  
+    if(scene == 0){
+    no();
+  }else if(scene == 1){
+    no();
+    mu();
+  }else if(scene == 2){
+    no();
+    mu2();
+  }else if(scene == 3){
+    no();
+    egao();
+  }else if(scene == 4){
+    no();
+    egao2();
+  }else if(){
+    no();
+    ok();
+  }
+  
+  
   if(scene == 0){
       no();
       random = (int)random(0,255);
