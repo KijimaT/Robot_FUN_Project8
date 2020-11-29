@@ -36,6 +36,7 @@ void draw() {
     port.write(1);//Arduinoに1を送る
   } else if (signal == 100) {//Arduinoから100を受け取ってる時okを実行（デフォルト状態にする）
     count = 0;
+    no();//11/29に編集
     ok();
     /*TODO*/
     //Arduinoへokを表示していることを伝える
@@ -54,6 +55,7 @@ void draw() {
   } else if (signal == 102) {
     /*TODO*/
     //起動完了後の動作
+    no();//11/29に編集
     egao();
     delay(2500);//遅延させて、デフォルトに戻る
     port.write(1);
