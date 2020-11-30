@@ -2,7 +2,7 @@ int num = 0;
 int scene = 0;//画面遷移切り替え用変数
 int count = 0;//時間管理用変数
 int flag = 0;//タッチ管理での状態遷移状況管理用変数
-int signal=0;//arduinoからの値100~
+int signal = 0;//arduinoからの値100~
 int sInit = 0;
 
 void setup() {
@@ -10,19 +10,21 @@ void setup() {
   //fullScreen();
   size(400, 250);
   //mu2();
- // port = new Serial(this, "/dev/ttyACM0", 9600);
+  //port = new Serial(this, "/dev/ttyACM0", 9600);
 }
 
 void draw() {
  // delay(100);
   //signal =port.read();
   num = (int)random(0,255);
+  /*
   print(signal);
   print(",");
   print(num%5);
   print(",");
   println(scene);
   println("flag:"+flag);
+  */
 
   /*signalが0か100の時*/
   if (signal==0) {//signal=0(初期値)

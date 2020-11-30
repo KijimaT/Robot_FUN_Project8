@@ -1,7 +1,6 @@
 import processing.serial.*;
 
 Serial port;
-
 int num = 0;
 int scene = 0;//画面遷移切り替え用変数
 int count = 0;//時間管理用変数
@@ -22,11 +21,12 @@ void draw() {
  // delay(100);
   signal =port.read();
   num = (int)random(0,255);
-  print(signal);
+   print(signal);
   print(",");
   print(num%5);
   print(",");
   println(scene);
+  println("flag:"+flag);
 
   /*signalが0か100の時*/
   if (signal==0) {//signal=0(初期値)
@@ -57,7 +57,7 @@ void draw() {
     /*TODO*/
     //起動完了後の動作
     no();//11/29に編集
-    egao();
+    good();
     delay(2500);//遅延させて、デフォルトに戻る
     port.write(1);
     flag = 1;
