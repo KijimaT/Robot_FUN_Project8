@@ -21,12 +21,10 @@ void draw() {
  // delay(100);
   signal =port.read();
   num = (int)random(0,255);
-   print(signal);
-  print(",");
-  print(num%5);
+  print(signal);
   print(",");
   println(scene);
-  println("flag:"+flag);
+
 
   /*signalが0か100の時*/
   if (signal==0) {//signal=0(初期値)
