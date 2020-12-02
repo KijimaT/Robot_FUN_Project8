@@ -51,7 +51,7 @@ void draw() {
     default1();
     port.write(1);
     
-  } else if (signal == 102 && flag == 2) {
+  } else if (flag == 2) {
     /*TODO*/
     //起動完了後の動作
     no();//11/29に編集
