@@ -62,7 +62,7 @@ void draw() {
     //11/29に編集
     //good();
     println("test");
-    delay(30000);//遅延させて、デフォルトに戻る
+    //delay(30000);//遅延させて、デフォルトに戻る
     //flag = 1;
     //port.write(1);
     if(flag == 1){
