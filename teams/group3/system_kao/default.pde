@@ -4,7 +4,7 @@ void default1() {
   if (flag == 1) {
     if (scene == 0) {
       println("scene=0");
-      frameRate(1);
+      //frameRate(1);
       no();
       
       //delay(1000);
@@ -12,7 +12,7 @@ void default1() {
       scene = num % 5;
     } else if (scene == 1) {
       println("scene=1");
-      frameRate(1);
+      //frameRate(1);
       no();
       mu();
       
@@ -28,7 +28,7 @@ void default1() {
       scene = num % 5;
     } else if (scene == 2) {
       println("scene=2");
-      frameRate(1);
+      //frameRate(1);
       no();
       mu2();
       
@@ -43,7 +43,7 @@ void default1() {
       scene = num % 5;
     } else if (scene == 3) {
       println("scene=3");
-      frameRate(1);
+      //frameRate(1);
       no();
       egao();
       
@@ -58,7 +58,7 @@ void default1() {
       scene = num % 5;
     } else if (scene == 4) {
       println("scene=4");
-      frameRate(1);
+      //frameRate(1);
       no();
       egao2();
       
