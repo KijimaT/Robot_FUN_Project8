@@ -1,7 +1,6 @@
 int time =0;
 void default1() {
   //int time=0;
-  if (flag == 1) {
     if (scene == 0) {
       println("scene=0");
       //frameRate(1);
@@ -75,11 +74,4 @@ void default1() {
       //background(0);
       scene = num % 5;
    }
-  } else {
-    //default1が呼び出されててもタッチでflagが2ならばegaoを表示する
-    //egao();
-    no();
-    good();
-    //Arduinoには2を送信して、102が帰ってくる
-  }
 }

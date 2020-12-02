@@ -13,8 +13,8 @@ void setup() {
   fullScreen();
   //size(400, 250);
   //mu2();
-  port = new Serial(this, "/dev/ttyACM0", 9600);
-   //port = new Serial(this, "COM5", 9600);
+  port = new Serial(this, "/dev/ttyACM0", 115200);
+   //port = new Serial(this, "COM5", 11520);
 }
 
 void draw() {
@@ -50,7 +50,7 @@ void draw() {
     //flagをどう使うか？
     //→
     no();//11/29に編集
-    //flag = 1;
+    flag = 1;
     default1();
     port.write(1);
     
@@ -58,7 +58,6 @@ void draw() {
     /*TODO*/
     //起動完了後の動作
     no();
-    
     //frameRate(1);
     //11/29に編集
     good();
@@ -66,7 +65,6 @@ void draw() {
     //port.write(1);
     flag = 1;
     port.write(1);
-    
   } else {
     port.write(0);
   }
