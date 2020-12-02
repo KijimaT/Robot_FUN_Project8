@@ -1,4 +1,3 @@
-//顔
 
 void no(){
   background(0);
@@ -47,7 +46,11 @@ void ok(){//モータ制御用変数port.write(5)
 
 void good(){
     no();
-    fill(#006400);
-    textSize(75);
-    text("good!",width/3,height/2);
+    fill(255,0,0);
+    arc(width*150/400, height*75/250, width*50/400, height*50/250, radians(180), radians(360));
+    arc(width-width*150/400, height*75/250, width*50/400, height*50/250, radians(180), radians(360));
+    arc(width/2, height*150/250, width*130/400, height*130/250, radians(0), radians(180)); 
+    fill(0,0,0);
+    arc(width*150/400, height*75/250, width*30/400, height*30/250, radians(180), radians(360));
+    arc(width-width*150/400, height*75/250, width*30/400, height*30/250, radians(180), radians(360));
 }
