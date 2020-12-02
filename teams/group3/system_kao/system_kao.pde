@@ -7,8 +7,6 @@ int count = 0;//時間管理用変数
 int flag = 0;//タッチ管理での状態遷移状況管理用変数
 int signal=0;//arduinoからの値100~
 int sInit = 0;
-int t_start;//時間管理用
-int t;//時間管理用
 
 void setup() {
   background(0); 
@@ -16,14 +14,14 @@ void setup() {
   //size(400, 250);
   //mu2();
   port = new Serial(this, "/dev/ttyACM0", 115200);
-   //port = new Serial(this, "COM5", 11520);
+  //port = new Serial(this, "COM5", 11520);
 }
 
 void draw() {
- // delay(100);
+  // delay(100);
   frameRate(60);
   signal =port.read();
-  num = (int)random(0,255);
+  num = (int)random(0, 255);
   print(signal);
   print(",");
   print(scene);
@@ -38,7 +36,7 @@ void draw() {
 
     port.write(1);//Arduinoに1を送る
   } else if (signal == 100) {//Arduinoから100を受け取ってる時okを実行（デフォルト状態にする）
-    count = 0;
+    //count = 0;
     no();//11/29に編集
     ok();
     /*TODO*/
@@ -55,7 +53,6 @@ void draw() {
     flag = 1;
     default1();
     port.write(1);
-    
   } else if (signal == 102) {
     /*TODO*/
     //起動完了後の動作
@@ -63,24 +60,24 @@ void draw() {
     //frameRate(1);
     //11/29に編集
     //good();
-    println("test");
+    //println("test");
     //delay(30000);//遅延させて、デフォルトに戻る
     //flag = 1;
     //port.write(1);
-    if(flag == 1){
-    port.write(1);
+    if (flag == 1) {
+      port.write(1);
     }
   } else {
     port.write(0);
   }
+  if (flag == 2) {
+    no();
+    good();
+    delay(3000);
+  }
 }
 
-if(flag == 2){
-  no();
-  good();
-  delay(3000);
-  flag = 1;
-}
+
 
 
 /*
