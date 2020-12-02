@@ -10,8 +10,8 @@ int sInit = 0;
 
 void setup() {
   background(0); 
-  //fullScreen();
-  size(400, 250);
+  fullScreen();
+  //size(400, 250);
   //mu2();
   port = new Serial(this, "/dev/ttyACM0", 9600);
    //port = new Serial(this, "COM5", 9600);
@@ -63,7 +63,7 @@ void draw() {
     good();
     //port.write(1);
     flag = 1;
-    //delay(2500);//遅延させて、デフォルトに戻る
+    delay(3000);//遅延させて、デフォルトに戻る
   } else {
     port.write(0);
   }
