@@ -42,7 +42,7 @@ void draw() {
     /*TODO*/
     //Arduinoへokを表示していることを伝える
     port.write(1);
-    //flag = 1;
+    flag = 1;
   } else if (signal == 101) {
     /*TODO*/
     //通信のタイミング?が分からないので(?)
@@ -50,7 +50,7 @@ void draw() {
     //flagをどう使うか？
     //→
     no();//11/29に編集
-    flag = 1;
+    //flag = 1;
     default1();
     port.write(1);
   } else if (signal == 102) {
@@ -73,7 +73,8 @@ void draw() {
   if (flag == 2) {
     no();
     good();
-    delay(3000);
+    delay(6000);
+    flag=1;
   }
 }
 
