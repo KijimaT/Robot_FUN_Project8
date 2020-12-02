@@ -19,6 +19,7 @@ void setup() {
 
 void draw() {
  // delay(100);
+  frameRate(60);
   signal =port.read();
   num = (int)random(0,255);
   print(signal);
@@ -54,6 +55,7 @@ void draw() {
   } else if (flag == 2) {
     /*TODO*/
     //起動完了後の動作
+    frameRate(1);
     no();//11/29に編集
     good();
     port.write(1);
