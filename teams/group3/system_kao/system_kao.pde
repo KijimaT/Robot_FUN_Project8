@@ -56,9 +56,9 @@ void draw() {
     //起動完了後の動作
     no();//11/29に編集
     good();
-    delay(2500);//遅延させて、デフォルトに戻る
     port.write(1);
     flag = 1;
+    delay(2500);//遅延させて、デフォルトに戻る
   } else {
     port.write(0);
   }
