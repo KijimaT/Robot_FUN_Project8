@@ -54,7 +54,7 @@ void draw() {
     default1();
     port.write(1);
     
-  } else if (flag == 2) {
+  } else if (signal == 102) {
     /*TODO*/
     //起動完了後の動作
     port.write(1);
