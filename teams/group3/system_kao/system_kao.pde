@@ -7,6 +7,8 @@ int count = 0;//時間管理用変数
 int flag = 0;//タッチ管理での状態遷移状況管理用変数
 int signal=0;//arduinoからの値100~
 int sInit = 0;
+int t_start;//時間管理用
+int t;//時間管理用
 
 void setup() {
   background(0); 
