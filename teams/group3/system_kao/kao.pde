@@ -7,7 +7,6 @@ void no(){
 
 
 void mu(){//モータ制御用変数port.write(1)
-    
     fill(#006400);
     ellipse(width/4,height/3,width*1/10,width*1/10);
     ellipse(width*3/4,height/3,width*1/10,width*1/10);
@@ -15,30 +14,27 @@ void mu(){//モータ制御用変数port.write(1)
 }
 
 void mu2(){//モータ制御用変数port.write(2)
-    
     fill(#006400);
     ellipse(width/4,height/3,width*1/10,width*1/10);
     ellipse(width*3/4,height/3,width*1/10,width*1/10);
-    rect(150,150,100,20);//無表情
+    rect(width*350/1000,height*550/1000,width*300/1000,height*10/100);//無表情
 }
 
 void egao(){//モータ制御用変数port.write(3)
-    
     fill(#006400);
-    ellipse(width*375/1000,height*75/100,20,20);
-    ellipse(width*250/1000,75,20,20);
-    arc(width/2, height*150/1000, 130, 130, radians(0), radians(180)); //口笑顔
+    ellipse(width/4,height/3,width*1/10,width*1/10);
+    ellipse(width*3/4,height/3,width*1/10,width*1/10);
+    arc(width/2, height*150/250, width*130/400, height*130/250, radians(0), radians(180));
 }
 
 void egao2(){//モータ制御用変数port.write(4)
-    
     fill(#006400);
-    arc(150, 75, 50, 50, radians(180), radians(360));
-    arc(width-150, 75, 50, 50, radians(180), radians(360));
-    arc(width/2, 150, 130, 130, radians(0), radians(180)); 
+    arc(width*150/400, height*75/250, width*50/400, height*50/250, radians(180), radians(360));
+    arc(width-width*150/400, height*75/250, width*50/400, height*50/250, radians(180), radians(360));
+    arc(width/2, height*150/250, width*130/400, height*130/250, radians(0), radians(180)); 
     fill(0,0,0);
-    arc(150, 75, 30, 30, radians(180), radians(360));
-    arc(width-150, 75, 30, 30, radians(180), radians(360));
+    arc(width*150/400, height*75/250, width*30/400, height*30/250, radians(180), radians(360));
+    arc(width-width*150/400, height*75/250, width*30/400, height*30/250, radians(180), radians(360));
     
 }
 
