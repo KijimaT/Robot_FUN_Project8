@@ -48,3 +48,10 @@ void ok(){//モータ制御用変数port.write(5)
     textSize(75);
     text("OK!",width/3,height/2);
 }
+
+void good(){
+    no();
+    fill(#006400);
+    textSize(75);
+    text("good!",width/3,height/2);
+}
