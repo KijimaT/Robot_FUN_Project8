@@ -73,7 +73,7 @@ void draw() {
   if (flag == 2) {
     no();
     good();
-    delay(6000);
+    delay(500);
     flag=1;
   }
 }
