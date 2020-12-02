@@ -77,7 +77,9 @@ void default1() {
    }
   } else {
     //default1が呼び出されててもタッチでflagが2ならばegaoを表示する
-    egao();
+    //egao();
+    no();
+    good();
     //Arduinoには2を送信して、102が帰ってくる
   }
 }
