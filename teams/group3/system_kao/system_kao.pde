@@ -61,8 +61,8 @@ void draw() {
     //frameRate(1);
     //11/29に編集
     good();
-    delay(3000);//遅延させて、デフォルトに戻る
-    //port.write(1);
+    println("test");
+    delay(30000);//遅延させて、デフォルトに戻る
     flag = 1;
     port.write(1);
   } else {
