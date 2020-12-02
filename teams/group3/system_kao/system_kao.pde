@@ -50,7 +50,7 @@ void draw() {
     //flagをどう使うか？
     //→
     no();//11/29に編集
-    flag = 1;
+    //flag = 1;
     default1();
     port.write(1);
     
