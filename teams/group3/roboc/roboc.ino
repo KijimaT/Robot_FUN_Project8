@@ -28,7 +28,7 @@ Adafruit_DCMotor *headMotor = AFMS.getMotor(DC_HEAD_PIN);
 
 void setup() {
   //ArduinoにRaspberry piから電源を供給し、ロボットの動作がスタートする
-  Serial.begin(9600);
+  Serial.begin(115200);
 }
 
 void loop() {
@@ -53,6 +53,7 @@ void loop() {
       delay(3000);
       AFMS.begin();
       //目線が上を向いて水平にする
+      /*
       headMotor->run(FORWARD);
       for (i = 0; i < 120; i = i + 10) {
         headMotor->setSpeed(i);
@@ -69,6 +70,7 @@ void loop() {
       delay(1000);
       headMotor->run(RELEASE);
       delay(1000);
+      */
       //首を左右に動かす
       neck.write(60, SERVO_NECK_SPEED2, true);
       delay(1000);

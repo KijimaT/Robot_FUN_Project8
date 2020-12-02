@@ -57,13 +57,16 @@ void draw() {
   } else if (signal == 102) {
     /*TODO*/
     //起動完了後の動作
-    port.write(1);
+    no();
+    
     //frameRate(1);
-    no();//11/29に編集
+    //11/29に編集
     good();
+    delay(3000);//遅延させて、デフォルトに戻る
     //port.write(1);
     flag = 1;
-    delay(3000);//遅延させて、デフォルトに戻る
+    port.write(1);
+    
   } else {
     port.write(0);
   }
