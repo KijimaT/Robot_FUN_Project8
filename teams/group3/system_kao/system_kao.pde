@@ -13,8 +13,8 @@ void setup() {
   fullScreen();
   //size(400, 250);
   //mu2();
-  port = new Serial(this, "/dev/ttyACM0", 115200);
-  //port = new Serial(this, "COM5", 11520);
+  //port = new Serial(this, "/dev/ttyACM0", 115200);
+  port = new Serial(this, "COM5", 115200);
 }
 
 void draw() {

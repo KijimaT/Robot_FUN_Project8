@@ -36,6 +36,7 @@ void loop() {
   uint8_t i;
   //受信したデータを読み込む
   data = Serial.read();
+  Serial.println(data);
   /** 電源を入れた時の動作 **/
   if (data == 0) { //RaspberryPiとの通信の確認前
     /*** モータの初期動作　***/

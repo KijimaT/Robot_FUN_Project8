@@ -12,6 +12,7 @@ void default1() {
     } else if (scene == 1) {
       println("scene=1");
       //frameRate(1);
+      port.write(20);
       no();
       mu();
       
@@ -28,6 +29,7 @@ void default1() {
     } else if (scene == 2) {
       println("scene=2");
       //frameRate(1);
+      port.write(22);
       no();
       mu2();
       
@@ -43,6 +45,7 @@ void default1() {
     } else if (scene == 3) {
       println("scene=3");
       //frameRate(1);
+      port.write(21);
       no();
       egao();
       
@@ -58,6 +61,7 @@ void default1() {
     } else if (scene == 4) {
       println("scene=4");
       //frameRate(1);
+      port.write(23);
       no();
       egao2();
       

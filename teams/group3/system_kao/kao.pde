@@ -6,7 +6,7 @@ void no(){
 
 
 void mu(){//モータ制御用変数port.write(1)
-    port.write(20);
+    
     fill(#006400);
     ellipse(width/4,height/3,width*1/10,width*1/10);
     ellipse(width*3/4,height/3,width*1/10,width*1/10);
@@ -14,7 +14,7 @@ void mu(){//モータ制御用変数port.write(1)
 }
 
 void mu2(){//モータ制御用変数port.write(2)
-    port.write(22);
+    
     fill(#006400);
     ellipse(width/4,height/3,width*1/10,width*1/10);
     ellipse(width*3/4,height/3,width*1/10,width*1/10);
@@ -22,7 +22,7 @@ void mu2(){//モータ制御用変数port.write(2)
 }
 
 void egao(){//モータ制御用変数port.write(3)
-    port.write(21);
+    
     fill(#006400);
     ellipse(width/4,height/3,width*1/10,width*1/10);
     ellipse(width*3/4,height/3,width*1/10,width*1/10);
@@ -30,7 +30,7 @@ void egao(){//モータ制御用変数port.write(3)
 }
 
 void egao2(){//モータ制御用変数port.write(4)
-    port.write(23);
+    
     fill(#006400);
     arc(width*150/400, height*75/250, width*50/400, height*50/250, radians(180), radians(360));
     arc(width-width*150/400, height*75/250, width*50/400, height*50/250, radians(180), radians(360));
