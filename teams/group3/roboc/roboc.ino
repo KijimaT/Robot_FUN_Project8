@@ -20,6 +20,7 @@ VarSpeedServo rs;//右肩
 #define SERVO_NECK_SPEED2 50
 #define SERVO_RS_SPEED1 20
 #define SERVO_RS_SPEED2 65
+#define SERVO_RS_SPEED3 10
 
 Adafruit_MotorShield AFMS = Adafruit_MotorShield();
 Adafruit_DCMotor *legMotor = AFMS.getMotor(DC_LEG_PIN);
@@ -117,7 +118,28 @@ void loop() {
   } else if (data == 3) {
     //servo2.write(0);
     Serial.write(3);
-  } else if (data == 4) {
-
+  } else if (data == 20) {
+    delay(500);
+    rs.attach(SERVO_RSHOULDER_PIN);
+    rs.write(75, SERVO_RS_SPEED3, true);
+    Serial.write(1);
+  } else if (data == 21){
+    delay(500);
+    rs.attach(SERVO_RSHOULDER_PIN);
+    rs.write(110, SERVO_RS_SPEED1, true);
+    Serial.write(1);
+  } else if(data == 22){
+    delay(500);
+    rs.attach(SERVO_RSHOULDER_PIN);
+    rs.write(90, SERVO_RS_SPEED3, true);
+    Serial.write(1);
+  } else if(data ==23){
+    delay(500);
+    rs.attach(SERVO_RSHOULDER_PIN);
+    rs.write(110, SERVO_RS_SPEED3, true);
+    rs.write(105, SERVO_RS_SPEED2,true);
+    rs.write(110, SERVO_RS_SPEED2,true);
+    rs.write(105, SERVO_RS_SPEED2,true);
+    Serial.write(1);
   }
 }
