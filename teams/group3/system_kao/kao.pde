@@ -14,7 +14,7 @@ void mu(){//モータ制御用変数port.write(1)
 }
 
 void mu2(){//モータ制御用変数port.write(2)
-    port.wite(22);
+    port.write(22);
     fill(#006400);
     ellipse(width/4,height/3,width*1/10,width*1/10);
     ellipse(width*3/4,height/3,width*1/10,width*1/10);

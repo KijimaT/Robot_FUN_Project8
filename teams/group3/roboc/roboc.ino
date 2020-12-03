@@ -122,17 +122,17 @@ void loop() {
     delay(500);
     rs.attach(SERVO_RSHOULDER_PIN);
     rs.write(75, SERVO_RS_SPEED3, true);
-    Serial.write(1);
+    Serial.write(101);
   } else if (data == 21){
     delay(500);
     rs.attach(SERVO_RSHOULDER_PIN);
     rs.write(110, SERVO_RS_SPEED1, true);
-    Serial.write(1);
+    Serial.write(101);
   } else if(data == 22){
     delay(500);
     rs.attach(SERVO_RSHOULDER_PIN);
     rs.write(90, SERVO_RS_SPEED3, true);
-    Serial.write(1);
+    Serial.write(101);
   } else if(data ==23){
     delay(500);
     rs.attach(SERVO_RSHOULDER_PIN);
@@ -140,6 +140,6 @@ void loop() {
     rs.write(105, SERVO_RS_SPEED2,true);
     rs.write(110, SERVO_RS_SPEED2,true);
     rs.write(105, SERVO_RS_SPEED2,true);
-    Serial.write(1);
+    Serial.write(101);
   }
 }
