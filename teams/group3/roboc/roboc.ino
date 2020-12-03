@@ -36,7 +36,7 @@ void loop() {
   uint8_t i;
   //受信したデータを読み込む
   data = Serial.read();
-  Serial.println(data);
+  //Serial.println(data);
   /** 電源を入れた時の動作 **/
   if (data == 0) { //RaspberryPiとの通信の確認前
     /*** モータの初期動作　***/
@@ -76,7 +76,7 @@ void loop() {
       //首を左右に動かす
       neck.write(60, SERVO_NECK_SPEED2, true);
       delay(1000);
-      neck.write(120, SERVO_NECK_SPEED2, true);
+      neck.write(100, SERVO_NECK_SPEED2, true);
       delay(1000);
       neck.write(90, SERVO_NECK_SPEED1, true);
       //neck.wait();
@@ -122,7 +122,11 @@ void loop() {
   } else if (data == 20) {
     delay(500);
     rs.attach(SERVO_RSHOULDER_PIN);
-    rs.write(75, SERVO_RS_SPEED3, true);
+    neck.attach(SERVO_NECK_PIN);
+    rs.write(75, SERVO_RS_SPEED3);
+    neck.write(80,SERVO_NECK_SPEED1,true);
+    neck.write(95,SERVO_NECK_SPEED1,true);
+    neck.write(92,SERVO_NECK_SPEED1,true);
     Serial.write(101);
   } else if (data == 21){
     delay(500);
