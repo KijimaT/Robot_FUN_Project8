@@ -108,6 +108,7 @@ void loop() {
   } else if (data == 2 ) {
     //タップしたときのegaoでモータを動かす
     //neck.attach(SERVO_NECK_PIN);
+    delay(500);
     rs.attach(SERVO_RSHOULDER_PIN);
     rs.write(120, SERVO_RS_SPEED1, true);
     rs.write(90, SERVO_RS_SPEED1, true);
